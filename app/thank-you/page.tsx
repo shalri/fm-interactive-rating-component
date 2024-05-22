@@ -1,13 +1,9 @@
-"use client";
+import ThankYou from "@/components/ThankYou";
 
-import { useSearchParams } from "next/navigation";
-
-export default function ThankYou() {
-  const searchParams = useSearchParams();
-  const rating = searchParams.get("rating");
+export default function ThankYouPage() {
   return (
     <main className="flex flex-grow  items-center justify-center p-6">
-      <h1 className="">Thank you {rating}</h1>
+      <ThankYou />
     </main>
   );
 }
