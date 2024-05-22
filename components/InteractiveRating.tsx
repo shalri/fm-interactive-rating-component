@@ -1,11 +1,11 @@
 "use client";
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
-import { ToastAction } from "@/components/ui/toast";
-import { Toast } from "@radix-ui/react-toast";
+import { useRouter } from "next/navigation";
 
 export default function InteractiveRating() {
   const { toast } = useToast();
+  const router = useRouter();
   const [rating, setRating] = useState(0);
 
   const handleClick = (value: number) => {
@@ -14,12 +14,13 @@ export default function InteractiveRating() {
 
   const handleSubmit = () => {
     if (rating !== 0) {
-      alert(`You submitted a rating of ${rating}`);
+      router.push(`/thank-you?rating=${rating}`);
+      // alert(`You submitted a rating of ${rating}`);
     } else {
       toast({
         title: "Please select a rating from 1 to 5",
         description: "You need to select a rating before submitting.",
-        duration: 2000,
+        duration: 3000,
       });
     }
   };
@@ -27,20 +28,20 @@ export default function InteractiveRating() {
   const ratingValues = [1, 2, 3, 4, 5];
 
   return (
-    <section className="relative max-w-[358px] rounded-2xl bg-irc-dark-blue px-6 pb-8 pt-5 text-irc-white">
-      <div className="flex h-[42px] w-[42px] items-center justify-center rounded-full bg-irc-very-dark-blue">
+    <section className="relative max-w-[358px] rounded-2xl bg-irc-gradient px-6 pb-8 pt-6 text-irc-white">
+      <div className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-irc-light-grey/10">
         <img src="../images/icon-star.svg" alt="star" width={14} />
       </div>
-      <h1>How did we do?</h1>
-      <p className="">
+      <h1 className="mt-5 text-[1.475rem]">How did we do?</h1>
+      <p className="mt-2 text-sm leading-[1.6] opacity-60">
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </p>
-      <ol className="flex items-center justify-between">
+      <ol className="my-[1.475rem] flex items-center justify-between">
         {ratingValues.map((value) => (
           <li
             key={value}
-            className={`transition-color flex h-[42px] w-[42px] cursor-pointer items-center justify-center rounded-full bg-irc-light-grey pt-1 text-center font-bold duration-300 hover:bg-irc-orange active:bg-irc-white active:text-irc-very-dark-blue ${rating === value ? "bg-irc-white text-irc-very-dark-blue" : "bg-irc-light-grey"}`}
+            className={`transition-color flex h-[40px] w-[40px] cursor-pointer items-center justify-center rounded-full  pt-1 text-center text-sm font-bold duration-300 hover:bg-irc-orange hover:text-irc-very-dark-blue/80 active:text-irc-very-dark-blue/80 ${rating === value ? "bg-irc-white text-irc-very-dark-blue" : "bg-irc-light-grey/15 text-irc-white/50"}`}
             onClick={() => handleClick(value)}
           >
             {value}
