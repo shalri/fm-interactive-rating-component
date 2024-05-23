@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { useToast } from "@/components/ui/use-toast";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function InteractiveRating() {
   const { toast } = useToast();
@@ -15,7 +16,6 @@ export default function InteractiveRating() {
   const handleSubmit = () => {
     if (rating !== 0) {
       router.push(`/thank-you?rating=${rating}`);
-      // alert(`You submitted a rating of ${rating}`);
     } else {
       toast({
         title: "Please select a rating from 1 to 5",
@@ -30,7 +30,12 @@ export default function InteractiveRating() {
   return (
     <section className="relative max-w-[358px] rounded-2xl bg-irc-gradient px-6 pb-8 pt-6 text-irc-white">
       <div className="flex h-[40px] w-[40px] items-center justify-center rounded-full bg-irc-light-grey/10">
-        <img src="../images/icon-star.svg" alt="star" width={14} />
+        <Image
+          src="./images/icon-star.svg"
+          width={14}
+          height={14}
+          alt="star icon"
+        />
       </div>
       <h1 className="mt-5 text-[1.475rem]">How did we do?</h1>
       <p className="mt-2 text-sm leading-[1.6] opacity-60">
