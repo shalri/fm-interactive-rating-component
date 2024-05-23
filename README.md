@@ -1,36 +1,67 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Frontend Mentor - Interactive rating component solution
 
-## Getting Started
+This is a solution to the [Interactive rating component challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/interactive-rating-component-koxpeBUmI). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-First, run the development server:
+## Table of contents
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- [Overview](#overview)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Overview
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Links
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- Solution URL: (https://github.com/shalri/fm-interactive-rating-component)
+- Live Site URL: (https://shalri.github.io/fm-interactive-rating-component/)
 
-## Learn More
+## My process
 
-To learn more about Next.js, take a look at the following resources:
+### Built with
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- NextJS
+- React
+- Tailwind
+- Prettier Tailwind Plugin
+- ViteJS
+- Semantic HTML5 markup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### What I learned
 
-## Deploy on Vercel
+I used NextJS for this challenge. Since I plan to integrate Frontend Mentor
+into my study routine, I might as well play around with NextJS and React alongside the
+challenges.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Implementing this challenge with NextJS made it more interesting. It gave me
+a broader scope. I had to integrate the UX when the user submits the rating.
+I leaned on `shadcn/ui` for the `Toast` component. This prevents the user from
+unrated submissions.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+I also used a loader as a fallback when the page rendering is slow. I also used
+hooks like `useSearchParams` to pass the rating submitted by the user.
+
+This challenge showed the importance of a `.fig` file. I spent most of the time
+pixel-pushing to set the dimensions, spacing, and layout just right. I am proud of the results since I was only eyeballing it.
+
+### Continued development
+
+I look forward to doing more challenges from [Frontendmentor.io](https://www.frontendmentor.io). I like learning and practicing new concepts.
+
+### Useful resources
+
+- [CSS Loaders](https://css-loaders.com/infinity/) - Loader used while routing to Thank You page.
+- [CSSgradient.io](https://cssgradient.io/) - Generating the subtle gradient
+- [Shadcn/ui](https://ui.shadcn.com/) - The toaster I used when the user clicks
+  the submit button without choosing a rating.
+
+### Author
+
+- Website: [FScode](https://shalri.github.io/fscode/)
+- Frontend Mentor: [Shalri](https://www.frontendmentor.io/profile/shalri)
+- Github: [Shalri](https://github.com/shalri)

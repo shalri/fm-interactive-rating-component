@@ -9,7 +9,7 @@ export default function ThankYou() {
   const rating = searchParams.get("rating");
 
   return (
-    <section className="relative flex max-w-[358px] flex-col items-center justify-center rounded-2xl bg-irc-gradient px-6 pb-8 pt-6 text-center text-irc-white sm:max-w-[412px] sm:rounded-[30px] sm:p-8 sm:px-8 sm:pb-10">
+    <section className="fadeIn relative flex max-w-[358px] flex-col items-center justify-center rounded-2xl bg-irc-gradient px-6 pb-8 pt-6 text-center text-irc-white sm:max-w-[412px] sm:rounded-[30px] sm:p-8 sm:px-8 sm:pb-10">
       <div className="mt-3 w-[148px] sm:mt-[.8rem] sm:w-[160px]">
         <Image
           src="./images/illustration-thank-you.svg"
