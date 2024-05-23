@@ -48,14 +48,15 @@ const config = {
         normal: "400",
         bold: "700",
       },
+      fontSize: {
+        body: "15px",
+      },
       screens: {
         mobile: "375px",
         desktop: "1440px",
       },
       backgroundImage: {
         "irc-gradient":
-          // "linear-gradient(180deg, rgba(34,41,51,1) 15%, rgba(24,31,41,0.7447795823665893) 100%)",
-          // "linear-gradient(180deg, rgba(34,41,51,1) 15%, rgba(24,31,41,1) 100%)",
           "linear-gradient(180deg, rgba(34,41,51,1) 5%, rgba(24,31,41,1) 100%)",
       },
     },
