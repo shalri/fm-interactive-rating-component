@@ -21,7 +21,7 @@ export default function ThankYou() {
       <h1 className="mt-7 text-[1.475rem]">Thank You!</h1>
       <p className="mt-2 text-sm leading-[1.6] opacity-50">
         We appreciate you taking the time to give a rating. If you ever need
-        more support, don't hesitate to get back in touch!
+        more support, don&apos;t hesitate to get back in touch!
       </p>
     </section>
   );
